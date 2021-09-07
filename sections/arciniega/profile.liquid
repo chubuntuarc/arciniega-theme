@@ -1,0 +1,49 @@
+{%- comment -%}Custom section by arciniega.dev{%- endcomment -%}
+<div class="arc_profile">
+  <h1>{{ section.settings.profile_name }}</h1>
+  <img src="{{ section.settings.profile_pic }}" alt="{{ section.settings.profile_name }}_picture" loading="lazy" height="auto" width="auto">
+  <p>{{ section.settings.description }}</p>
+</div>
+
+{% schema %}
+{
+  "name": {
+    "en": "Profile",
+    "es": "Perfil",
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "profile_pic",
+      "label": {
+        "en": "Profile picture",
+        "es": "Foto de perfil"
+      }
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": {
+        "en": "Profile description",
+        "es": "Resumen personal"
+      },
+      "default": {
+        "en": "This is my custom profile section :)",
+        "es": "Esta es mi sección de perfil personalizado :)"
+      }
+    },
+    {
+      "type": "text",
+      "id": "profile_name",
+      "label": {
+        "en": "Profile Name",
+        "es": "Nombre del perfíl"
+      },
+      "default": {
+        "en": "Custom Username",
+        "es": "Nombre de Usuario"
+      }
+    }
+  ]
+}
+{% endschema %}
